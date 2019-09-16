@@ -17,6 +17,11 @@
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
+require_once( 'BFIGitHubPluginUploader.php' );
+if ( is_admin() ) {
+    new BFIGitHubPluginUpdater( __FILE__, 'ccharacter', "pl-login", "e10a72212dd70107e64d945d613bd1bc0cdbc96a" );
+}
+
 function sws_login_limiter() {
 
         // can use full or partial IPs, no wildcards needed

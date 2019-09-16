@@ -6,11 +6,11 @@ class BFIGitHubPluginUpdater {
  
     private $slug; // plugin slug
     private $pluginData; // plugin data
-    private $username="ccharacter"; // GitHub username
-    private $repo="pl-login"; // GitHub repo name
-    private $pluginFile="__FILE__"; // __FILE__ of our plugin
+    private $username; // GitHub username
+    private $repo=; // GitHub repo name
+    private $pluginFile; // __FILE__ of our plugin
     private $githubAPIResult; // holds data from GitHub
-    private $accessToken="e10a72212dd70107e64d945d613bd1bc0cdbc96a"; // GitHub private repo token
+    private $accessToken; // GitHub private repo token
  
     function __construct( $pluginFile, $gitHubUsername, $gitHubProjectName, $accessToken = '' ) {
         add_filter( "pre_set_site_transient_update_plugins", array( $this, "setTransitent" ) );
