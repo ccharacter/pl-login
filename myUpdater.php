@@ -71,7 +71,7 @@ class Smashing_Updater {
 		  $plugin = array(
 			'name'              => $this->plugin["Name"],
 			'slug'              => $this->basename,
-			'version'           => $this->github_response['tag_name'],
+			'version'           => $this->plugin['Version'],
 			'author'            => $this->plugin["AuthorName"],
 			'author_profile'    => $this->plugin["AuthorURI"],
 			'last_updated'      => $this->github_response['published_at'],
