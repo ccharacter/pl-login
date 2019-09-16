@@ -4,7 +4,7 @@
  * Plugin Name:       SWS Login Blocker
  * Plugin URI:        https://example.com/plugins/the-basics/
  * Description:       Redirect users away from login page based on IP address
- * Version:           1.0.0
+ * Version:           1.16
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Sharon Stromberg
@@ -36,7 +36,7 @@ function sws_login_limiter() {
         $one= $_SERVER['REMOTE_ADDR'];
         $two=$_SERVER['HTTP_X_FORWARDED_FOR'];
 
-        echo $one."<br />".$two;
+        //echo $one."<br />".$two;
 
         foreach ($blockArr as $ip) {
                 if ($one==$ip || $two==$ip) {
