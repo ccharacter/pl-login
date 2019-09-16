@@ -19,13 +19,15 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 
 // Include our updater file
-include_once( plugin_dir_path( __FILE__ ) . 'myUpdater.php');
+if( ! class_exists( 'Smashing_Updater' ) ){
+	include_once( plugin_dir_path( __FILE__ ) . 'myUpdater.php' );
+}
 
 $updater = new Smashing_Updater( __FILE__ ); // instantiate our class
 $updater->set_username( 'ccharacter' ); // set username
 $updater->set_repository( 'pl-login' ); // set repo
-$updater->initialize(); // initialize the updater
 $updater->authorize( 'e10a72212dd70107e64d945d613bd1bc0cdbc96a' ); // set access token
+$updater->initialize(); // initialize the updater
 
 
 
