@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-require_once( 'BFIGitHubPluginUploader.php' );
+require_once( 'updater.php' );
 if ( is_admin() ) {
     new BFIGitHubPluginUpdater( __FILE__, 'ccharacter', "pl-login", "e10a72212dd70107e64d945d613bd1bc0cdbc96a" );
 }
