@@ -12,7 +12,20 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Sharon's custom plugin for securing the WordPress login page
 
-### GitHub
+## GitHub
 * GitHub Plugin URI
 * GitHub Theme URI
 * GitHub Languages
+
+## Frequently Asked Questions
+
+Q: What is the meaning of life?
+A: 42
+
+## Changelog
+
+updating versions as I go
+
+## Upgrade Notice
+
+Something goes here.
