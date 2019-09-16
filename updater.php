@@ -7,7 +7,7 @@ class BFIGitHubPluginUpdater {
     private $slug; // plugin slug
     private $pluginData; // plugin data
     private $username; // GitHub username
-    private $repo=; // GitHub repo name
+    private $repo; // GitHub repo name
     private $pluginFile; // __FILE__ of our plugin
     private $githubAPIResult; // holds data from GitHub
     private $accessToken; // GitHub private repo token
