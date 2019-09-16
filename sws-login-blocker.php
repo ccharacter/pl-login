@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 
 // Include our updater file
-if( ! class_exists( 'Smashing_Updater' ) ){
+/*if( ! class_exists( 'Smashing_Updater' ) ){
 	include_once( plugin_dir_path( __FILE__ ) . 'myUpdater.php' );
 }
 
@@ -27,10 +27,16 @@ $updater = new Smashing_Updater( __FILE__ ); // instantiate our class
 $updater->set_username( 'ccharacter' ); // set username
 $updater->set_repository( 'pl-login' ); // set repo
 $updater->authorize( 'e10a72212dd70107e64d945d613bd1bc0cdbc96a' ); // set access token
-$updater->initialize(); // initialize the updater
+$updater->initialize(); // initialize the updater*/
 
 
-
+require 'lib/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/ccharacter/pl-login/',
+	__FILE__,
+	'sws-login-blocker'
+);
+$myUpdateChecker->setAuthentication('e10a72212dd70107e64d945d613bd1bc0cdbc96a');
 
 function sws_login_limiter() {
 
