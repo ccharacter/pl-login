@@ -1,3 +1,7 @@
+#### 1.62 / 2019-09-16
+
+* remove slash in include path
+
 #### 1.61 / 2019-09-16
 
 * Include vs Require?
