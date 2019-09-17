@@ -1,3 +1,7 @@
+#### 2.07 / 2019-09-17
+
+* Cosmetic changes
+
 #### 2.06 / 2019-09-17
 
 Comment out branch line
