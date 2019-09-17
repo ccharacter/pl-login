@@ -1,7 +1,7 @@
 {
 	"name": "SWS Login Blocker",
-	"version": "1.62",
-	"download_url": "https://github.com/ccharacter/pl-login/releases/tag/v1.5",
+	"version": "2.10",
+	"download_url": "https://github.com/ccharacter/pl-login/releases/latest",
 
 	"homepage": "http://example.com/",
 	"requires": "5.2",

@@ -1,3 +1,7 @@
+#### 2.10 / 2019-09-17
+
+* rejigger auth, etc.
+
 #### 2.07 / 2019-09-17
 
 * Cosmetic changes

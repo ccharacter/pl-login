@@ -24,6 +24,12 @@ A: 42
 
 ## Changelog
 
+2.10
+* Something
+* Something else
+
+1.XX
+
 * New Version
 * updating versions as I go
 * v1.6: Changed something

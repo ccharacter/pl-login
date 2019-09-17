@@ -4,7 +4,7 @@
  * Plugin Name:       SWS Login Blocker
  * Plugin URI:        https://github.com/ccharacter/pl-login
  * Description:       Redirect users away from login page based on IP address
- * Version:           2.07
+ * Version:           2.10
  * Requires at least: 5.2
  * Tested up to: 	  5.2
  * Required WP:		  5.2
@@ -29,18 +29,18 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 $updater = new Smashing_Updater( __FILE__ ); // instantiate our class
 $updater->set_username( 'ccharacter' ); // set username
 $updater->set_repository( 'pl-login' ); // set repo
-$updater->authorize( 'e10a72212dd70107e64d945d613bd1bc0cdbc96a' ); // set access token
+$updater->authorize( 'token_goes_here' ); // set access token
 $updater->initialize(); // initialize the updater*/
 
 
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/user-name/repo-name/',
+	'https://github.com/ccharacter/pl-login/',
 	__FILE__,
-	'unique-plugin-or-theme-slug'
+	'sws-login-blocker'
 );
-$myUpdateChecker->setAuthentication('e10a72212dd70107e64d945d613bd1bc0cdbc96a');
-//$updateChecker->setBranch('master');
+$myUpdateChecker->setAuthentication('16c18e9f074adfe9e3373fa333e7ba16b7078450');
+$myUpdateChecker->setBranch('master');
 $myUpdateChecker->getVcsApi()->enableReleaseAssets();
 
 function sws_login_limiter() {
