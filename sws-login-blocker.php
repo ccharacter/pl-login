@@ -4,7 +4,7 @@
  * Plugin Name:       SWS Login Blocker
  * Plugin URI:        https://github.com/ccharacter/pl-login
  * Description:       Redirect users away from login page based on IP address
- * Version:           1.62
+ * Version:           2.01
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Sharon Stromberg
@@ -30,11 +30,11 @@ $updater->authorize( 'e10a72212dd70107e64d945d613bd1bc0cdbc96a' ); // set access
 $updater->initialize(); // initialize the updater*/
 
 
-include_once( plugin_dir_path( __FILE__ ) .'lib/plugin-update-checker.php');
+require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/ccharacter/pl-login/latest/',
+	'https://github.com/user-name/repo-name/',
 	__FILE__,
-	'sws-login-blocker'
+	'unique-plugin-or-theme-slug'
 );
 $myUpdateChecker->setAuthentication('e10a72212dd70107e64d945d613bd1bc0cdbc96a');
 
