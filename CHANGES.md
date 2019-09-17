@@ -1,3 +1,7 @@
+#### 2.06 / 2019-09-17
+
+Comment out branch line
+
 #### 2.05 / 2019-09-17
 
 * Playing with settings
