@@ -24,8 +24,9 @@ A: 42
 
 ## Changelog
 
-updating versions as I go
-v1.6: Changed something
+* New Version
+* updating versions as I go
+* v1.6: Changed something
 
 ## Upgrade Notice
 
