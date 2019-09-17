@@ -1,3 +1,7 @@
+#### 2.02 / 2019-09-17
+
+*cosmetic changes for update purposes
+
 #### 2.01 / 2019-09-17 
 
 * different version of helper plugin
