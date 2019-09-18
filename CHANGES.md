@@ -1,3 +1,7 @@
+#### 2.22 / 2019-09-18
+
+* remove troublesome function calls
+
 #### 2.21 / 2019-09-18
 
 * fix typo in classes
