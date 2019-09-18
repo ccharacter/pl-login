@@ -1,3 +1,7 @@
+#### 2.21 / 2019-09-18
+
+* fix typo in classes
+
 #### 2.20 / 2019-09-18
 
 * restructure

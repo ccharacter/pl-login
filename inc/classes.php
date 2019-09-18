@@ -39,6 +39,6 @@ class swsLoginBlocker {
 		add_action( 'login_enqueue_scripts', 'sws_login_limiter');
 
 	}
-
+}
 
 ?>
