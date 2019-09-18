@@ -1,0 +1,21 @@
+{
+	"name": "SWS Login Blocker",
+	"version": "2.28",
+	"download_url": "https://github.com/ccharacter/sws-login-blocker/archive/v2.28.zip",
+
+	"homepage": "https://ccharacter.com/custom-plugins/sws-login-blocker/",
+	"requires": "5.2",
+	"tested": "5.2",
+	"last_updated": "2019-09-18 22:17:00",
+	"upgrade_notice": "Here's why you should upgrade...",
+
+	"author": "Sharon Stromberg",
+	"author_homepage": "http://ccharacter.com/",
+
+	"sections": {
+		"description": "This plugin is designed to hide the login page from specified IP addresses/ranges.",
+		"changelog": "Changelog. <p>Most of the changes so far involved updating.</p>",
+		"disclaimer": "This plugin is provided with no guarantees."
+	}
+
+}
