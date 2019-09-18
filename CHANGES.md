@@ -1,3 +1,7 @@
+#### 2.25 / 2019-09-18
+
+* GO PUBLIC
+
 #### 2.22 / 2019-09-18
 
 * remove troublesome function calls
