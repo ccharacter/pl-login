@@ -1,3 +1,9 @@
+#### 2.20 / 2019-09-18
+
+* restructure
+* classes
+* fix json and download links
+
 #### 2.11 / 2019-09-17
 
 * Test update
