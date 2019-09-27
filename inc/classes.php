@@ -3,8 +3,7 @@
 
 class swsLoginBlocker {
 
-	global $sws_blocker_db;
-	$sws_add_nad_db = '1.0';
+	public $sws_blocker_db = '1.0';
 
 
 	public function sws_lockout_table() {	
@@ -31,11 +30,11 @@ class swsLoginBlocker {
 	public function sws_login_limiter() {
 
 		// Sharon's phone for testing
-		//$blockArr=array('99.201.17.238'); 
+		//$blockArr=array('99.203.17.238'); 
         
 		
 		// can use full or partial IPs, no wildcards needed
-        $blockArr=array('103.','112.','114.','115.','116.','118.','119.','121.','122.','123.','125.','128.',
+        	$blockArr=array('103.','112.','114.','115.','116.','118.','119.','121.','122.','123.','125.','128.',
                 '134.','138.','139.','14.','144.','145.','149.','150.','153.',
                 '154.','157.','159.','163.','164.','165.','167.','176.','178.','180.','182.','186.','186.','187.','188.','190.',
                 '195.','197.','2.','200.','202.','203.','210.','211.','212.','213.','217.','221.','27.','31.','36.','37.','41.','42.','43.','45.252.',
@@ -44,19 +43,22 @@ class swsLoginBlocker {
         );
 
         $one= $_SERVER['REMOTE_ADDR'];
-        $two=$_SERVER['HTTP_X_FORWARDED_FOR'];
+        if (array_key_exists('HTTP_X_FORWARDED_FOR',$_SERVER)) {$two=$_SERVER['HTTP_X_FORWARDED_FOR']; } else {$two='none';}
 
-        //echo $one."<br />".$two;
+        error_log($one."|".$two,0);
 
         foreach ($blockArr as $ip) {
                 if ($one==$ip || $two==$ip) {
                         // redirect
-                        header("Location: /about");
+                	$this->insert($one,$two); 
+		       header("Location: /about");
+			exit();
                 }
 
                 $pos1=strpos($one,$ip); $pos2=strpos($two,$ip);
                 if ( (($pos1!==false) && ($pos1==0))  || (($pos2!==false) && ($pos2==0)) ) {
-                        header("Location: /certification");
+                        $this->insert($one,$two,'range');
+			header("Location: /certification");
                 }
 
         }
@@ -64,7 +66,19 @@ class swsLoginBlocker {
 	}
 
 
+	public function insert($one,$two,$which='exact') {
+		global $wpdb;
+		$table=$wpdb->prefix . 'sws_login_blocker';
+		
+		$data=array('attempt_ip'=>$one." | ".$two, 'attempt_cat'=>$which);
+		$format=array('%s','%s');
+		$wpdb->insert($table,$data,$format);
+
+	}
+
+
 	public function init() {
+		$this->sws_lockout_table();
 		add_action( 'login_enqueue_scripts', array($this,'sws_login_limiter'));
 
 	}
