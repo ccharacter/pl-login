@@ -1,7 +1,7 @@
 {
 	"name": "SWS Login Blocker",
-	"version": "3.1",
-	"download_url": "https://github.com/ccharacter/sws-login-blocker/archive/v3.1.zip",
+	"version": "3.2",
+	"download_url": "https://github.com/ccharacter/sws-login-blocker/archive/v3.2.zip",
 
 	"homepage": "https://ccharacter.com/custom-plugins/sws-login-blocker/",
 	"requires": "5.2",
