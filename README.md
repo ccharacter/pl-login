@@ -1,4 +1,4 @@
-# pl-login
+# sws-login-blocker
 This plugin is designed to protect WordPress from brute force attacks by 
 redirecting requests for the login page if they come from suspect geographical areas.
 
